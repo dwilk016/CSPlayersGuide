@@ -17,6 +17,6 @@ At home I will use Visual Studio for editing and compiling.
 */
 
 /*
-Challenge: Install Visual Studio
+Challenge: Install Visual Studio (75 XP)
 - [x] Install Visual Studio
 */
