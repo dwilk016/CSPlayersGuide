@@ -79,3 +79,5 @@ int bearEggs = eggCount % 4;
 int sisterEggs = eggCount / 4;
 
 Console.WriteLine($"Each sister gets {sisterEggs} and the Duckbear gets {bearEggs}.");
+
+// Ans: 3, 11, and 15 the bear will get more eggs then the sisters. 
