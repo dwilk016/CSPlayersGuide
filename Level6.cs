@@ -148,3 +148,53 @@ Console.WriteLine("float: " + PI);
 Console.WriteLine("double: " + number);
 Console.WriteLine("decimal: " + money);
 Console.WriteLine("bool: " + logic);
+
+/*
+Notes:
+Type Inference:
+var can be used to infer a type, but the values must be initalized when it is declared. 
+  var number = 5; // int
+  var text = "Hello"; // string
+  var character = 'g'; // char
+  var isTrue; // invalid
+
+Use Case:
+var input = Console.ReadLine(); // can take strings, char, int, or long. 
+
+Once it is initalized you cannot change the type. 
+
+The Convert and Parse Class:
+You can use the convert class to convert between types. 
+
+Convert.ToWhatever();
+
+.ToByte()
+.ToInt16()
+.ToInt32()
+.ToInt64()
+.ToSByte()
+.ToUInt16()
+.ToUInt32()
+.ToUInt64()
+.ToChar()
+.ToString()
+.ToSingle()
+.ToDouble()
+.ToDecimal()
+.ToBool()
+
+Most Types have a .Parse() Method as well
+int.Parse("42069"); // converts a string to an int
+*/
+
+/*
+Knowledge Check: Type System (25 XP)
+1. False
+2. byte, short, int, long
+3. false
+4. uint
+5. float, double, decimal
+6. double
+7. decimal
+8. string
+9. bool
