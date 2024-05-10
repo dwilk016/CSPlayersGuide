@@ -9,3 +9,9 @@ F#, and PowerShell. This means that they have some commonalities that
 are shared across languages. This makes moving from one language to the 
 other within the .NET framework easier. 
 */
+
+/*
+Knowledge Check: 
+TRUE/FALSE: C# is a special purpose language optimized for making web applications. ANS: FALSE
+What is the name of the framework that C# runs on? ANS: .NET
+*/
