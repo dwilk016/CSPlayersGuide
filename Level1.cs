@@ -13,7 +13,7 @@ other within the .NET framework easier.
 */
 
 /*
-Knowledge Check: 
+Knowledge Check: C# (25 XP)
 TRUE/FALSE: C# is a special purpose language optimized for making web applications. ANS: FALSE
 What is the name of the framework that C# runs on? ANS: .NET
 */
