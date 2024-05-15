@@ -53,38 +53,44 @@ int 0xB; // 10 in hex
 
 ## Character and String Types:
 char holds a single character. 
-
+```csharp
 char letter = 'a'; // uses single quotes
 char letter = '\u0061'; // unicode can be used with the \u prefix. 
 
 string text = "Hello, World"; // uses double quotes
+```
 
 ## Floating Point Types:
 Floating point types are used to represent fractional values (real numbers) to varying degrees of accuracy. 
 
-float - 4 - +-1.0x10^-45 - +-3.4x10^38 - 7
-double - 8 - +-5x10^-324 - +-1.7x10^308 - 15 or 16
-decimal - 16 - +-1x10^-28 - +-7.9x10^28 - 28 or 29 
+- float - 4 - +-1.0x10^-45 - +-3.4x10^38 - 7
+- double - 8 - +-5x10^-324 - +-1.7x10^308 - 15 or 16
+- decimal - 16 - +-1x10^-28 - +-7.9x10^28 - 28 or 29 
 
 float and double are hardware supported and very fast. deciaml is not, therfore slower, but is more accurate.
 decimal is primarily used where accuracy is paramount like finance.
 
 fractions will be declared as doubles unless otherwise told
-  double PI = 3.14159
-  float PI = 3.14159f // f for float
-  decimal PI = 3.14159m // m for money. 
+```csharp
+double PI = 3.14159
+float PI = 3.14159f // f for float
+decimal PI = 3.14159m // m for money. 
+```
 
 You can also use exponential notation to declare a double. 
-  double avogadrosNuber = 6.022e23
+```csharp
+double avogadrosNuber = 6.022e23
+```
 
 ## Bool Type:
 Boolean Logic type is TRUE (1) or FALSE (0)
-
+```csharp
 bool isNull = FALSE;
 bool isToday = 1;
-*/
+```
 
 ## Challenge: The Variable Shop (100 XP)
+```csharp
 byte smallest = 1;
 sbyte verySmall = -5;
 short small = 35;
@@ -117,9 +123,10 @@ Console.WriteLine("float: " + PI);
 Console.WriteLine("double: " + number);
 Console.WriteLine("decimal: " + money);
 Console.WriteLine("bool: " + logic);
+```
 
 ## Challenge: The Variable Shop Returns (50 XP)
-
+```csharp
 smallest = 5;
 verySmall = 6;
 small = 46;
@@ -152,25 +159,30 @@ Console.WriteLine("float: " + PI);
 Console.WriteLine("double: " + number);
 Console.WriteLine("decimal: " + money);
 Console.WriteLine("bool: " + logic);
+```
 
-/*
-Notes:
-Type Inference:
+## Type Inference:
 var can be used to infer a type, but the values must be initalized when it is declared. 
-  var number = 5; // int
-  var text = "Hello"; // string
-  var character = 'g'; // char
-  var isTrue; // invalid
+```csharp
+var number = 5; // int
+var text = "Hello"; // string
+var character = 'g'; // char
+var isTrue; // invalid
+```
 
 Use Case:
+```csharp
 var input = Console.ReadLine(); // can take strings, char, int, or long. 
+```
 
 Once it is initalized you cannot change the type. 
 
-The Convert and Parse Class:
+## The Convert and Parse Class:
 You can use the convert class to convert between types. 
 
+```csharp
 Convert.ToWhatever();
+```
 
 .ToByte()
 .ToInt16()
@@ -188,11 +200,12 @@ Convert.ToWhatever();
 .ToBool()
 
 Most Types have a .Parse() Method as well
+```csharp
 int.Parse("42069"); // converts a string to an int
-*/
+```
 
-/*
-Knowledge Check: Type System (25 XP)
+
+## Knowledge Check: Type System (25 XP)
 1. False
 2. byte, short, int, long
 3. false
