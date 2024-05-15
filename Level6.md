@@ -1,22 +1,23 @@
 # Level 6: The C# Type System
 
-/*
-Notes:
+- bit - a single 1 or 0
+- byte - 8 bits
 
-bit - a single 1 or 0
-byte - 8 bits
-
-Binary -- Decimal 
+Binary -- Decimal
+```
 0000 -- 0
 0001 -- 1
 0010 -- 2
 0011 -- 3
 0100 -- 4
 1000 -- 8
+```
 
 Binary -- Letters
+```
 0100 0001 -- A
 0100 0010 -- B
+```
 
 Integer Types:
 byte - 1 - no - 0 - 255
