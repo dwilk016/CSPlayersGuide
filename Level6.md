@@ -30,25 +30,28 @@ Integer Types:
 - ulong - 8 - no - 0 - 18,446,744,073,709,551,615
 
 numbers literals are declared as ints unless otherwise told. 
-  35 - is declared as an int
-  35L - is declared as a long
-  35U - is declared as the smallest unsigned type (either uint or ulong)
-  35UL - is declared as a unsigned long
+- `35` - is declared as an int
+- `35L` - is declared as a long
+- `35U` - is declared as the smallest unsigned type (either uint or ulong)
+- `35UL` - is declared as a unsigned long
 
 You cannot declare short or byte literals, but note that computers will upgrade short and byte types to ints
 to do math on them anyway. You should only use byte or short when there is clear benefit. 
 
 Digit Seperator: normally we will write 1,000,000 to help read the number, but in code we can't do this.
 So we use underscores instead.
-  int x = 5000;
-  int x = 5_000; // same
-  
-Binary or Hex
+```csharp
+int x = 5000;
+int x = 5_000; // same
+```
+## Binary or Hex
 You can declare binary or hex literals with a 0b or 0x prefix.
-  int 0b1010; // 10 in binary
-  int 0xB; // 10 in hex
+```
+int 0b1010; // 10 in binary
+int 0xB; // 10 in hex
+```
 
-Character and String Types:
+## Character and String Types:
 char holds a single character. 
 
 char letter = 'a'; // uses single quotes
@@ -56,7 +59,7 @@ char letter = '\u0061'; // unicode can be used with the \u prefix.
 
 string text = "Hello, World"; // uses double quotes
 
-Floating Point Types:
+## Floating Point Types:
 Floating point types are used to represent fractional values (real numbers) to varying degrees of accuracy. 
 
 float - 4 - +-1.0x10^-45 - +-3.4x10^38 - 7
@@ -74,14 +77,14 @@ fractions will be declared as doubles unless otherwise told
 You can also use exponential notation to declare a double. 
   double avogadrosNuber = 6.022e23
 
-Bool Type:
+## Bool Type:
 Boolean Logic type is TRUE (1) or FALSE (0)
 
 bool isNull = FALSE;
 bool isToday = 1;
 */
 
-// Challenge: The Variable Shop (100 XP)
+## Challenge: The Variable Shop (100 XP)
 byte smallest = 1;
 sbyte verySmall = -5;
 short small = 35;
@@ -115,7 +118,7 @@ Console.WriteLine("double: " + number);
 Console.WriteLine("decimal: " + money);
 Console.WriteLine("bool: " + logic);
 
-// Challenge: The Variable Shop Returns (50 XP)
+## Challenge: The Variable Shop Returns (50 XP)
 
 smallest = 5;
 verySmall = 6;
