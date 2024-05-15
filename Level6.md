@@ -20,14 +20,14 @@ Binary -- Letters
 ```
 
 Integer Types:
-byte - 1 - no - 0 - 255
-short - 2 - yes - -32,768 - 32,767
-int - 4 - yes - -2,147,483,648 - 2,147,483,647
-long - 8 - yes - -9,233,372,036,854,775,808 - 9,233,372,036,854,775,807
-sbyte - 1 - yes - -128 - 127
-ushort - 2 no - 0 - 65,535
-uint - 4 - no - 0 - 4,294,967,295
-ulong - 8 - no - 0 - 18,446,744,073,709,551,615
+- byte - 1 - no - 0 - 255
+- short - 2 - yes - -32,768 - 32,767
+- int - 4 - yes - -2,147,483,648 - 2,147,483,647
+- long - 8 - yes - -9,233,372,036,854,775,808 - 9,233,372,036,854,775,807
+- sbyte - 1 - yes - -128 - 127
+- ushort - 2 no - 0 - 65,535
+- uint - 4 - no - 0 - 4,294,967,295
+- ulong - 8 - no - 0 - 18,446,744,073,709,551,615
 
 numbers literals are declared as ints unless otherwise told. 
   35 - is declared as an int
