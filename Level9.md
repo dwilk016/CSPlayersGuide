@@ -106,7 +106,42 @@ if (true) {
 }
 ```
 
+## Conditional Operator
 
+`condition expression ? expression if true : expression if false;`
 
+this is called the conditional operator and it works similar to an `if` statement.
 
+```csharp
+string displayText = score > highscore ? "New High Score!" : "Try Again";
+Console.WriteLine(displayText);
+```
 
+it should only be used when simple expressions are needed. 
+
+## Challenge: Watchtower
+```csharp
+Console.Write("x: ");
+string input = Console.ReadLine();
+int x = Convert.ToInt32(input);
+
+Console.Write("y: ");
+input = Console.ReadLine();
+int y = Convert.ToInt32(input);
+
+if (x > 0) {
+  if (y > 0) Console.WriteLine("NE");
+  if (y == 0) Console.WriteLine("E");
+  if (y < 0) Console.WriteLine("SE");
+}
+if (x == 0) {
+  if (y > 0) Console.WriteLine("N");
+  if (y == 0) Console.WriteLine("!");
+  if (y < 0) Console.WriteLine("S");
+}
+if (x < 0) {
+  if (y > 0) Console.WriteLine("NW");
+  if (y == 0) Console.WriteLine("W");
+  if (y < 0) Console.WriteLine("SW");
+}
+```
