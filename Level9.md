@@ -76,3 +76,16 @@ You can shorten this code:
 ```csharp
 bool levelComplete = score >= pointsNeededToPass;
 ```
+
+## Challenge: Repair the Clocktower
+```csharp
+string input = Console.ReadLine();
+int time = Covert.ToInt32(input);
+
+if (time % 2 == 0)
+  Console.WriteLine("Tick");
+else
+  Console.WriteLine("Tock");
+```
+
+
