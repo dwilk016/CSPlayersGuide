@@ -88,4 +88,25 @@ else
   Console.WriteLine("Tock");
 ```
 
+## Logical Operators
+There are two logical operators
+- `&&` and: both must be ture for true
+- `||` or: one must be true for true
+
+## Nesting `if` Statements
+```csharp
+if (true) {
+  if (false) {
+    Console.WriteLine("HI");
+  } else {
+    Console.WriteLine("GOODBYE");
+  }
+} else {
+  Console.WriteLine("Error");
+}
+```
+
+
+
+
 
