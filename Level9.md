@@ -12,7 +12,7 @@ if  (score == 100)
 ## Block Statement
 
 ```csharp
-{
+if (score == 100) {
   Console.WriteLine("A+!");
   Console.WriteLine("A Perfect score!");
 }
