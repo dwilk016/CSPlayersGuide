@@ -87,16 +87,16 @@ Console.WriteLine($"Each sister gets {sisterEggs} and the Duckbear gets {bearEgg
 // Ans: 3, 11, and 15 the bear will get more eggs then the sisters. 
 ```
 
-'=' is the assignment operator. 
+- '=' is the assignment operator. 
 
-'a += 5' is the same as a = a + 5
-'a -= 5' is the same as a = a - 5
-'a *= 5'
-'a /= 5'
-'a %= 5'
+- 'a += 5' is the same as a = a + 5
+- 'a -= 5' is the same as a = a - 5
+- 'a *= 5'
+- 'a /= 5'
+- 'a %= 5'
 
-a++ is a = a + 1
-a-- is a = a - 1
+- a++ is a = a + 1
+- a-- is a = a - 1
 
 ## Challenge: The Dominion of Kings
 ```csharp
