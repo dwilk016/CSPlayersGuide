@@ -146,3 +146,39 @@ for (int index = 0; index < duplicateArray.Length; index++) {
   Console.WriteLine($"duplicateArray[{index}]: {duplicateArray[index]}");
 }
 ```
+## The `Foreach` loop
+The foreach loop is specially designed for arrays. 
+```cs
+int[] scores = new int[10];
+
+for (int index = 0; index < scores.Length; index++) {
+  int score = scores[index];
+  Console.WriteLine(scores);
+}
+```
+This is simplified with a foreach loop
+```cs
+int[] scores = new int[10];
+
+foreach (int score in scores) {
+  Console.WriteLine(scores)
+}
+```
+The one downside of a foreach loop is that you lose knowledge of what index you are at. If you need to know the position you are better off with a for loop. Foreach loops also run
+slightly slower then for loops, so if preformance becomes an issue then rewrite foreach as for loops.
+
+## Challenge: The Laws of Freach
+```cs
+int[] array = new int[] {4, 51, -7, 13, -99, 15, -8, 45, 90};
+
+int currentSmallest = int.MaxValue;
+foreach (int element in array)
+  if (currentSmallest > element)
+    currentSmallest = element;
+Console.WriteLine(currentSmallest);
+
+int total = 0;
+foreach (int element in array) 
+  total += element;
+double average = (double)total/array.Length;
+Console.WriteLine(average);
