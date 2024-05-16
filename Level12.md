@@ -121,3 +121,28 @@ for (int index = 0; index < array.Length; index++) {
 double average = (double)total/array.Length;
 Console.WriteLine(average);
 ```
+
+## Challenge: The Replicator of D'To
+```cs
+int[] originalArray = new int[5];
+
+for (int index = 0; index < originalArray.Length; index++) {
+  Console.Write($"Enter a value for index {index}: ");
+  originalArray[index] = Convert.ToInt32(Console.ReadLine());
+}
+
+Console.WriteLine("Duplicating...");
+int[] duplicateArray = new int[5];
+for (int index = 0; index < duplicateArray.Length; index++) {
+  duplicateArray[index] = originalArray[index];
+}
+
+for (int index = 0; index < originalArray.Length; index++) {
+  Console.WriteLine($"originalArray[{index}]: {originalArray[index]}");
+}
+
+Console.WriteLine();
+for (int index = 0; index < duplicateArray.Length; index++) {
+  Console.WriteLine($"duplicateArray[{index}]: {duplicateArray[index]}");
+}
+```
