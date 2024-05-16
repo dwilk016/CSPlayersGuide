@@ -225,7 +225,7 @@ matrix[2,0,2] = new int[3]; matrix[2,1,2] = new int[3]; matrix[2,2,2] = new int[
 ```
 This gets complicated fast so proceed with caution.
 
-When looping through multi-dimensional arrays you are going to want to use the .Length Property, handing it the dimension you are interested in.
+When looping through multi-dimensional arrays you are going to want to use the .GetLength() Method, handing it the dimension you are interested in.
 ```cs
 int[,] matrix = new int[4,4];
 
