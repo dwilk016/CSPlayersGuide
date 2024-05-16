@@ -9,9 +9,9 @@
 - [x] Level 6
 - [x] Level 7
 - [x] Level 8
-- [ ] Level 9
-- [ ] Level 10
-- [ ] Level 11
+- [x] Level 9
+- [x] Level 10
+- [x] Level 11
 - [ ] Level 12
 - [ ] Level 13
 - [ ] Level 14
