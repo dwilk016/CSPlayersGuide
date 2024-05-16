@@ -182,3 +182,59 @@ foreach (int element in array)
   total += element;
 double average = (double)total/array.Length;
 Console.WriteLine(average);
+```
+
+## Multi-Dimensional Arrays
+There is no limit to what you can make an array out of. You can have an array of arrays!
+```cs
+int[][] matrix = int[3][];
+matrix[0] = new int[] {1, 2};
+matrix[1] = new int[] {3, 4};
+matrix[2] = new int[] {5, 6};
+
+Console.WriteLine(matrix[0][1]) // Result: 2
+```
+When each of the inner arrays needs to be different size, that is known as a jagged array. 
+
+Multidimensional arrays are created as follows:
+```cs
+int[,] matrix = new int[3, 2] { {1, 2}, {3, 4}, {5, 6} };
+
+Console.WriteLine(matrix[0, 1]); // Result: 2
+```
+
+You can have many dimensional multi-dimensional arrays or arrays
+```cs
+int [][,] matrix = new int[3][,]; // an array of multi-dimensional arrays
+matrix[0] = new int[3,3];
+matrix[1] = new int[3,3];
+matrix[2] = new int[3,3];
+
+int matrix[,,][] = new int[3,3,3][]; // a multi-dimensional array where each element is an array.
+matrix[0,0,0] = new int[3]; matrix[0,1,0] = new int[3]; matrix[0,2,0] = new int[3];
+matrix[0,0,1] = new int[3]; matrix[0,1,1] = new int[3]; matrix[0,2,1] = new int[3];
+matrix[0,0,2] = new int[3]; matrix[0,1,2] = new int[3]; matrix[0,2,2] = new int[3];
+
+matrix[1,0,0] = new int[3]; matrix[1,1,0] = new int[3]; matrix[1,2,0] = new int[3];
+matrix[1,0,1] = new int[3]; matrix[1,1,1] = new int[3]; matrix[1,2,1] = new int[3];
+matrix[1,0,2] = new int[3]; matrix[1,1,2] = new int[3]; matrix[1,2,2] = new int[3];
+
+matrix[2,0,0] = new int[3]; matrix[2,1,0] = new int[3]; matrix[2,2,0] = new int[3];
+matrix[2,0,1] = new int[3]; matrix[2,1,1] = new int[3]; matrix[2,2,1] = new int[3];
+matrix[2,0,2] = new int[3]; matrix[2,1,2] = new int[3]; matrix[2,2,2] = new int[3];
+```
+This gets complicated fast so proceed with caution.
+
+When looping through multi-dimensional arrays you are going to want to use the .Length Property, handing it the dimension you are interested in.
+```cs
+int[,] matrix = new int[4,4];
+
+for (int row = 0; row < matrix.GetLength(0); row++)
+{
+  for (int column = 0; column < matrix.GetLength(1); column++)
+  {
+    Console.Write(matrix[row, column] + " ");
+  }
+  Console.WriteLine();
+}
+```
