@@ -95,14 +95,14 @@ class Program
     {
 		Console.WriteLine();
 		Console.WriteLine("=================================");
-        Console.WriteLine("=   The Hunt for the Manticore  =");
+		Console.WriteLine("=   The Hunt for the Manticore  =");
 		Console.WriteLine("=================================");
 		Console.WriteLine("=   The Manticore is attacking  =");
-        Console.WriteLine("=   the city of Consola. It is  =");
+		Console.WriteLine("=   the city of Consola. It is  =");
 		Console.WriteLine("=   up to you to mount a        =");
 		Console.WriteLine("=   defense. Can you save the   =");
-        Console.WriteLine("=   city?                       =");
+		Console.WriteLine("=   city?                       =");
 		Console.WriteLine("=================================");
-        Console.WriteLine();
+		Console.WriteLine();
     }
 }
