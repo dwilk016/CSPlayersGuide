@@ -125,24 +125,114 @@ This is a useful way of documenting your code and good practice.
 
 ## Challenge: Taking a Number 
 ```cs
-int result = AskForNumber("What is the speed of an unladen swallow? ");
-result = AskForNumberInRange("What is the speed of an unladen swallow? ", 0, 100);
+int result = AskForInteger("What is the speed of an unladen swallow? ");
+int rangeResult = AskForIntegerInRange("Pick a number between 1 and 100: ", 1, 100);
 
-int AskForNumber(string text)
+/// <summary>
+/// This function takes a text and returns an integer.
+/// </summary>
+int AskForInteger(string text)
 {
-  Console.Write(text);
-  string input = Console.ReadLine();
-  return Convert.ToInt32(input);
+    Console.Write(text);
+    
+    while (true) 
+    {
+        string input = Console.ReadLine();
+
+        if (int.TryParse(input, out result)) 
+        {
+            return result;
+        }
+
+        Console.Write("Please enter an Interger Value: ");
+    }
 }
 
-int AskForNumberInRange(string text, int min, int max)
+/// <summary>
+/// This function takes a text and returns only integer values in a specific range.
+/// </summary>
+int AskForIntegerInRange(string text, int min, int max)
 {
-  Console.Write(text);
-  do
-  {
-    string input = Console.ReadLine();
-    int result = Convert.ToInt32(input);
-  } while (result < min || result > max)
+    Console.Write(text);
+
+    while (true)
+    {
+        string input = Console.ReadLine();
+
+        if (int.TryParse(input, out result) && isIntegerInRange(result, min, max))
+        {
+            return result;
+        }
+
+        Console.Write($"Please enter an Interger Value between {min} and {max}: ");
+    }
+}
+
+/// <summary>
+/// This function checks to see if an integer is between two integers.
+/// </summary>
+bool isIntegerInRange (int value, int min, int max)
+{
+    bool inRange = (value >= min && value <= max);
+    return inRange;
 }
 ```
-I'm too tired for this shit, I'll fix it later.... its broken.
+
+## The Basics of Recursion
+A method can call other methods when needed, even itself. This is known as recursion. 
+```cs
+void RecursionMethod()
+{
+  RecursionMethod();
+}
+```
+This code demonstrates the danger of recursion. This code will never stop executing until the computer runs out of memory. Recursion must have a way to stop. For example:
+```cs
+int Factorial(int number)
+{
+  if(number == 1) return 1;
+  return number * Factorial(number - 1);
+}
+```
+When we reach one the recursion will collapse and the program will stop executing. Lets run through this step by step for `number = 3`.
+
+```cs
+Console.WriteLine(Factorial(3));
+//step 1: 3 is passed to Factorial
+  if(3 == 1) return 1 // false
+  return 3 * Factorial(2);
+
+  //step 2: 2 is passed to Factorial, before the return!
+  if(2 == 1) return 1 // false
+  return 2 * Factorial(1);
+
+  //step 3: 1 is passed to Factorial, before the second return!
+  if(1 == 1) return 1; // true
+  
+  //step 4: the recursion now collapses.
+  return 2 * 1; // 2
+
+  //step 5:
+  return 3 * 2;
+
+//step 6: 
+Console.WriteLine(6);
+```
+Recursion can be tricky and you need to exercise caution when using it. The big takeaway for now is that methods can all other methods, including themselves. 
+
+## Challenge: Countdown
+```cs
+for (int index = 10; index > 0; index--)
+{
+    Console.WriteLine(index);
+}
+
+CountDown(10);
+
+void CountDown(int number)
+{
+    if (number == 0) return;
+    Console.WriteLine(number);
+    CountDown(number - 1);
+}
+```
