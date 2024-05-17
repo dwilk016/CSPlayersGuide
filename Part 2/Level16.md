@@ -53,3 +53,23 @@ enum State
   Open
 }
 ```
+
+## Underlying Type
+The secret to Enums is that they are jsut int types, but they can be forced to other integer types
+```cs
+enum Season : byte { ... }
+```
+This forces the values to be of byte type.
+
+The first value is the default and = 0, they increment by 1 from there, but you can force them to have a value too.
+```cs
+enum Season { Winter = 3, Spring = 6, Summer = 9, Fall = 12 }
+```
+There does not have to be a default value, but be careful as you will need to make sure all your bases are covered. 
+
+You can also cast enums from one type to another.
+```cs
+int number = (int)Season.Fall;
+Season now = (Season)3;
+```
+Just be careful, if you cast to a value that doesn't exist you will get an error. 
