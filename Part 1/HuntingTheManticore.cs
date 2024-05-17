@@ -5,8 +5,7 @@ class Program
 	public static void Main() 
 	{	
 		Intro();
-		Console.WriteLine("Press any key when you are ready to start.");
-		Console.ReadKey(true);
+		Console.WriteLine();
 		
 		string player1Request = "Player 1, how far away from the city do you want to station the Manticore? ";
 		int manticoreRange = AskForNumberInRange(player1Request, 1, 100);
