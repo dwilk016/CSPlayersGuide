@@ -91,7 +91,7 @@ class Program
 	}
 	
 	static void Intro()
-    {
+    	{
 		Console.WriteLine();
 		Console.WriteLine("=================================");
 		Console.WriteLine("=   The Hunt for the Manticore  =");
@@ -103,5 +103,5 @@ class Program
 		Console.WriteLine("=   city?                       =");
 		Console.WriteLine("=================================");
 		Console.WriteLine();
-    }
+    	}
 }
