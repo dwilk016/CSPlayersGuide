@@ -182,3 +182,87 @@ Circle circle = new Circle() { X = 1, Y = 2, Radius = 3 };
 
 // cirlce.X = 2 // this will fail because you can only make a change during initialization.
 ```
+
+## Challenge: The Properties of Arrows
+```cs
+using System;
+
+class Program
+{
+	public static void Main(string[] args)
+	{
+		Arrowhead userArrowhead = Arrow.GetUserArrowhead();
+		Fleching userFleching = Arrow.GetUserFleching();
+		float userShaft = Arrow.GetUserShaft();
+		float cost;
+		
+		Arrow userArrow = new Arrow(userArrowhead, userFleching, userShaft);
+		
+		cost = (float)userArrow.UserArrowhead + (float)userArrow.UserFleching + (float)userArrow.UserLength * 0.05f;
+		
+		Console.WriteLine(userArrow + ": " + cost);
+	}
+}
+
+class Arrow
+{
+	//FIELDS
+	
+	//PARAMETERS
+	public Arrowhead UserArrowhead { get; set; }
+	public Fleching UserFleching { get; set; }
+	public float UserLength { get; set; }
+	
+	//CONSTRUCTOR
+	public Arrow(Arrowhead arrowhead, Fleching fleching, float length)
+	{
+		UserArrowhead = arrowhead;
+		UserFleching = fleching;
+		UserLength = length;
+	}
+	
+	//METHODS
+	public override string ToString() => $"{UserArrowhead}, {UserFleching}, {UserLength}";
+	
+	public static Arrowhead GetUserArrowhead()
+	{
+		Console.Write("What do you want for fleching (Wood, Obsidian, Steel): ");
+		string input = Console.ReadLine();
+		
+		if(input == "Wood") return Arrowhead.Wood;
+		else if(input == "Obsidian") return Arrowhead.Obsidian;
+		else return Arrowhead.Steel;
+	}
+	
+	public static Fleching GetUserFleching()
+	{
+		Console.Write("What do you want for fleching (Goose, Turkey, Plastic): ");
+		string input = Console.ReadLine();
+		
+		if(input == "Goose") return Fleching.GooseFeather;
+		else if(input == "Turkey") return Fleching.GooseFeather;
+		else return Fleching.Plastic;
+	}
+	
+	public static float GetUserShaft()
+	{
+		Console.Write("How long do you want the shaft: ");
+		string input = Console.ReadLine();
+		return Convert.ToSingle(input);
+	}
+}
+
+enum Arrowhead
+{
+	Wood = 3,
+	Obsidian = 5,
+	Steel = 10
+}
+
+enum Fleching
+{
+	GooseFeather = 3,
+	TurkeyFeather = 5,
+	Plastic = 10
+}
+```
