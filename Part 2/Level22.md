@@ -35,6 +35,7 @@ private string? GetTopPlayerName()
 {
     return _scoreManager.GetScores()[0].Name;
 }
+```
 here `_scoreManager` could be null, `GetScores()` could return null, or the array could contain a null reference at index 0. To check for all of this our code becomes:
 
 ```cs
@@ -50,6 +51,7 @@ private string? GetTopPlayerScore()
 
     return topScore.Name;
 }
+```
 
 The null check makes this code hard to understand and increases complexitiy. We can use the Null conditional operators to simplify.
 
@@ -58,6 +60,7 @@ private string? GetTopPlayerName()
 {
     return _scoreManager?.GetScores()?[0]?.Name;
 }
+```
 the `?.` and `?[]` evaluate the part before and if it is null, then they do not execute further and simply return null.
 
 ## The NULL coalescing Operator `??`
